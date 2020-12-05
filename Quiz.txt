@@ -7,3 +7,17 @@ names = ["Joey Tribbiani", "Monica Geller", "Chandler Bing", "Phoebe Buffay"]
 should create the list:
 
 usernames = ["joey_tribbiani", "monica_geller", "chandler_bing", "phoebe_buffay"]
+
+# Solutions
+# Using a for loop
+usernames = [] # Iniatialize an empty list
+
+for name in names:
+    usernames.append(name.lower().replace(' ', '_')) # You can chain different methods
+print(usernames)
+
+
+# Using a range function
+for name in range(len(usernames)):
+    usernames[name] = usernames[name].lower().replace(' ','_')
+print(usernames)
